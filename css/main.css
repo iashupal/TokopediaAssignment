@@ -1,0 +1,69 @@
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.container {
+    width: 70%;
+    margin: 0px auto;
+    border: 1px solid;
+}
+
+.content {
+    margin: 2% 35% 2%;
+}
+
+.input {
+    padding: 5px;
+    font-family: kristen ITC;
+    font-weight: bold;
+    border: 1px solid;
+    box-shadow: 2px 2px grey inner;
+}
+
+table {
+    width: 100%;
+    margin-top: 2%;
+}
+
+table thead tr th {
+    width: 50%;
+    text-align: center;
+    font-family: kristen ITC;
+    font-weight: bold;
+}
+
+.plotMap {
+    width: 49%;
+    display: inline-block;
+    border: 1px solid;
+    /*    border: 3px solid;*/
+}
+
+
+/*.temp_detail {
+    width: 45%;
+    display: inline-block;
+    font-size: 20px;
+}*/
+
+#resizeable {
+    height: 300px;
+}
+
+.chart {
+    /*    list-style: none;*/
+    width: 49%;
+    height: 300px;
+    display: inline-block;
+    border: 1px solid;
+}
