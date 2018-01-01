@@ -1,0 +1,130 @@
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.container {
+    width: 85%;
+    margin: 0px auto;
+    border: 1px solid;
+}
+
+.content {
+    margin: 2% 29% 2%;
+    position: inline-block;
+}
+
+.form {
+    padding: 5px;
+    margin: 2px;
+    font-family: kristen ITC;
+    font-weight: bold;
+    border: 1px solid;
+    box-shadow: 2px 2px grey inner;
+}
+
+#input_div {
+    position: relative;
+}
+
+.icon {
+    display: inline;
+    color: black;
+    position: absolute;
+    font-size: 18px;
+    left: 44.5%;
+    top: 11%;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    margin-top: 2%;
+}
+
+table thead tr th {
+    width: 50%;
+    text-align: center;
+    font-family: kristen ITC;
+    font-weight: bold;
+}
+
+.plotMap {
+    width: 40%;
+    display: inline-block;
+    border: 1px solid;
+    /*    border: 3px solid;*/
+}
+
+#resizable {
+    width: 430px;
+    height: 400px;
+    margin-left: 3%;
+    overflow: hidden;
+}
+
+.chart {
+    display: inline-block;
+    width: 45%;
+    position: relative;
+}
+
+
+/*Responsive code*/
+
+
+/*1200px css code*/
+
+@media screen and (max-width: 1280px) and (min-width: 1200px) {
+    .icon {
+        top: 9.5%;
+        left: 49.5%;
+    }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 1024px) {
+    .icon {
+        top: 11.5%;
+        left: 51.5%;
+    }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 992px) {
+    .icon {
+        top: 11.5%;
+        left: 52.2%;
+    }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    .icon {
+        top: 10.5%;
+        left: 56.2%;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 480px) {
+    .icon {
+        top: 8.5%;
+        left: 70.5%;
+    }
+}
+
+@media screen and (max-width: 479px) and (min-width: 320px) {
+    .content {
+        margin: 2% 7% 2%;
+    }
+    .content .icon {
+        top: 7.5%;
+        left: 73.5%;
+    }
+}

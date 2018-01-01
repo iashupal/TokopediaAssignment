@@ -1,0 +1,3 @@
+var voice;
+
+function recordVoice() {}
