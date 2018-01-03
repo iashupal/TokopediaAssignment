@@ -1,3 +1,4 @@
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 .left {
     float: left;
 }
@@ -12,119 +13,260 @@
     display: table;
 }
 
+
+/*
+body {
+    margin: 0px;
+}
+*/
+
 .container {
     width: 85%;
+/*    height: 620px;*/
     margin: 0px auto;
     border: 1px solid;
 }
 
-.content {
-    margin: 2% 29% 2%;
+.container .content {
+    width: 80%;
+    margin: 0px auto;
+/*    margin: 3% 29% 2%;*/
     position: inline-block;
+    position: relative;
+    font-size: 18px;
+    padding-bottom: 10px;
 }
 
-.form {
-    padding: 5px;
-    margin: 2px;
+.content .submit_btn {
+    height: 32px;
+/*        width: 80px;*/
+/*        padding: 10px;*/
+    
+   margin-left: 10px;
+/*    font-size: 18px;*/
     font-family: kristen ITC;
     font-weight: bold;
-    border: 1px solid;
-    box-shadow: 2px 2px grey inner;
+    background: #fcfcfc;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
 }
 
-#input_div {
+.content #input_div {
+    height: 32px;
+    width: 250px;
+    margin-top: 3%;
+    margin-left: 28%;
+    font-family: kristen ITC;
     position: relative;
+/*    font-size: 16px;*/
+    font-weight: bold;
+    background: #fcfcfc;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
 }
 
-.icon {
-    display: inline;
-    color: black;
+.content input {
+    text-indent: 28px;
+}
+
+.content .fa {
     position: absolute;
+    top: 7%;
+    right: 46%;
+    color: black;
     font-size: 18px;
-    left: 44.5%;
-    top: 11%;
     cursor: pointer;
 }
 
 table {
     width: 100%;
     margin-top: 2%;
+    background: #fcfcfc;
 }
 
 table thead tr th {
     width: 50%;
     text-align: center;
     font-family: kristen ITC;
-    font-weight: bold;
+    background: #fcfcfc;
 }
 
-.plotMap {
-    width: 40%;
+.container .plotMap {
+    width: 48%;
+/*    margin: 1px;*/
+    /*    height: 250px;*/
     display: inline-block;
-    border: 1px solid;
+/*    border: 1px solid;*/
+/*    padding: 10px;*/
+    /*    border-right: 1px solid;*/
     /*    border: 3px solid;*/
 }
 
-#resizable {
-    width: 430px;
+.plotMap #map {
     height: 400px;
-    margin-left: 3%;
-    overflow: hidden;
+    width: 400px;
+    margin: 3% 5%;
+    /*    border: 1px solid blue;*/
+}
+ng-map{
+    height: 300px;
 }
 
-.chart {
+.container .chart {
+    width: 48%;
+/*
+    height: 400px;
+    margin: 2px;
+*/
+/*    border: 1px solid;*/
+/*    padding: 10px;*/
     display: inline-block;
-    width: 45%;
-    position: relative;
+      position: relative;
+}
+
+#resizable {
+    height: 400px;
+    width: 450px;
+    margin: 3%;
+    overflow: hidden;
+/*    padding: 5px;*/
+/*    border: 2px dashed #AAA;*/
+}
+
+.ng-isolate-scope{
+    margin-top: 7%;
+}
+
+.chart .graph_detail{
+    position: absolute;
+    top: 1%;
+    left: 30%;
+    font-size: 14spx;
+    list-style: none;
+    
+}
+.chart .graph_detail li{
+    padding: 1px;
+    text-align: center;
 }
 
 
 /*Responsive code*/
 
-
-/*1200px css code*/
-
-@media screen and (max-width: 1280px) and (min-width: 1200px) {
-    .icon {
-        top: 9.5%;
-        left: 49.5%;
-    }
-}
-
+/*1024px css code*/
 @media screen and (max-width: 1199px) and (min-width: 1024px) {
-    .icon {
-        top: 11.5%;
-        left: 51.5%;
+    .content .fa {
+        right: 33%;
     }
+    /*
+    .container .plotMap {
+        width: 46.5%;
+    }
+    
+    .container .chart {
+        width: 46%;
+    }
+*/
 }
 
+/*992px css code*/
 @media screen and (max-width: 1023px) and (min-width: 992px) {
-    .icon {
-        top: 11.5%;
-        left: 52.2%;
+    .content .fa {
+        right: 30%;
     }
 }
 
+/*768px css code*/
 @media screen and (max-width: 991px) and (min-width: 768px) {
-    .icon {
-        top: 10.5%;
-        left: 56.2%;
+    .content #input_div {
+        width: 172px;
+    }
+    
+    .content input {
+        text-indent: 10px;
+    }
+    
+    .content .fa {
+        right: 35%;
+    }
+    .chart .graph_detail {
+        top: 5%;
+        left: 22%;
+        font-size: 12px;
     }
 }
 
+/*480px css code*/
 @media screen and (max-width: 767px) and (min-width: 480px) {
-    .icon {
-        top: 8.5%;
-        left: 70.5%;
+    .content {
+        margin: 3% 16%;
+        font-size: 16px;
+    }
+    
+    .content input {
+        text-indent: 10px;
+    }
+    
+    .content #input_div {
+        width: 170px;
+    }
+    
+    .content .fa {
+        right: 35%;
+    }
+    #map {
+        width: 233px;
+        margin-left: 2%;
+    }
+    .chart .graph_detail {
+        top: 4%;
+        left: 22%;
+        font-size: 9px;
+    }
+    #resizable {
+        width: 273px;
+        margin-left: 2%;
     }
 }
 
+/*320px css code*/
 @media screen and (max-width: 479px) and (min-width: 320px) {
     .content {
-        margin: 2% 7% 2%;
+        margin: 3% 4%;
+        font-size: 16px;
     }
-    .content .icon {
-        top: 7.5%;
-        left: 73.5%;
+    
+    .content input {
+        text-indent: 5px;
+    }
+    
+    .content #input_div {
+        width: 145px;
+    }
+    
+    .content .fa {
+        right: 37%;
+    }
+    #map {
+        width: 155px;
+        height: 200px;
+        margin-left: 2%;
+    }
+    ng-map {
+        height: 200px;
+    }
+    #resizable {
+        width: 203px;
+        margin-left: 0%;
+        height: 211px;
+    }
+    .ng-isolate-scope {
+        margin-top: 21%;
+    }
+    .chart .graph_detail {
+        top: 5%;
+        left: 9%;
     }
 }
