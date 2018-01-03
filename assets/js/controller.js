@@ -4,6 +4,7 @@ app.controller("whetherCtrl", function ($scope, whetherFactory, NgMap) {
     $scope.cityObj = {};
     $scope.showInfo = function () {
         var cityName = $scope.cityname;
+        $scope.cityname = "";
         var promise = whetherFactory.callServer(cityName);
         promise.then(function (data) {
             corObj = {
@@ -13,11 +14,12 @@ app.controller("whetherCtrl", function ($scope, whetherFactory, NgMap) {
                 , "temp": data.data.list[0].main
                 , "minTemp": data.data.list[0].main.temp_min
                 , "maxTemp": data.data.list[0].main.temp_max
+                , "humidity": data.data.list[0].main.humidity
             }
             $scope.corArray.push(corObj);
             var array = $scope.corArray[$scope.corArray.length - 1];
             console.log("array", array);
-            $scope.myValues = [array.temp.temp_max, array.temp.temp_min, array.temp.pressure, array.temp.humidity];
+            $scope.myValues = [array.temp.temp_max, array.temp.temp_min, array.temp.humidity];
             console.log("myvalues =  ", $scope.myValues);
             $scope.myObj = {
                 series: [
