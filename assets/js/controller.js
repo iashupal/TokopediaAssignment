@@ -1,7 +1,7 @@
 app.controller("whetherCtrl", function ($scope, whetherFactory, NgMap) {
     var corObj;
     $scope.corArray = [];
-    $scope.cityObj = {};
+    $scope.weather = [];
     $scope.showInfo = function () {
         var cityName = $scope.cityname;
         $scope.cityname = "";
@@ -17,10 +17,7 @@ app.controller("whetherCtrl", function ($scope, whetherFactory, NgMap) {
                 , "humidity": data.data.list[0].main.humidity
             }
             $scope.corArray.push(corObj);
-            var array = $scope.corArray[$scope.corArray.length - 1];
-            console.log("array", array);
-            $scope.myValues = [array.temp.temp_max, array.temp.temp_min, array.temp.humidity];
-            console.log("myvalues =  ", $scope.myValues);
+            $scope.weather.push([data.data.list[0].main.temp_min, data.data.list[0].main.temp_max, data.data.list[0].main.humidity]);
             $scope.myObj = {
                 series: [
                     {
@@ -32,7 +29,7 @@ app.controller("whetherCtrl", function ($scope, whetherFactory, NgMap) {
                             , borderColor: "#f56b6b"
                         }
             }
-            ]
+        ]
             };
         }, function (error) {
             $scope.result = error;
@@ -41,4 +38,4 @@ app.controller("whetherCtrl", function ($scope, whetherFactory, NgMap) {
         $scope.googleMapsUrl = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDB2xJgLWPTr3-hqGsjmGWS_ppoeR2toc0";
         NgMap.getMap().then(function (map) {});
     }
-})
+});
