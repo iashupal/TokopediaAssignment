@@ -11,48 +11,50 @@
 <body ng-app="whetherApp">
     <div ng-controller="whetherCtrl" class="container">
         <div class="content">
-            <div class="uppercontent">
-                <input id="input_div" type="text" ng-model="cityname" placeholder="Enter City Name" required> <i id="record_icon" class="fa fa-microphone" aria-hidden="true"></i>
-                <button class=" submit_btn " ng-click="showInfo() ">Submit</button>
-            </div>
-            <table border="1 ">
-                <thead>
-                    <tr>
-                        <th>City</th>
-                        <th>Temperature</th>
-                    </tr>
-                </thead>
-            </table>
-            <div ng-repeat="cityObj in corArray " class="clearfix plot_detail ">
-                <div class="plotMap " class="left ">
-                    <div id="map ">
-                        <div map-lazy-load="https://maps.google.com/maps/api/js " map-lazy-load-params="{{googleMapsUrl}} "></div>
-                        <ng-map center="{{cityObj.lat}},{{cityObj.long}} " zoom="{{zoom}} "></ng-map>
-                    </div>
+           <div class="uppercontent"> 
+            <input id="input_div" type="text" ng-model="cityname" placeholder="Enter City Name" required><i id="record_icon" class="fa fa-microphone" aria-hidden="true" onclick="recordVoice()"></i>
+                
+            <button class="submit_btn" ng-click="showInfo()">Submit</button></div>
+            
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>City</th>
+                    <th>Temperature</th>
+                </tr>
+            </thead>
+        </table>
+            
+        <div ng-repeat="cityObj in corArray" class="clearfix plot_detail">
+            <div class="plotMap left">
+                <div id="map">
+                    <div map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{googleMapsUrl}}"></div>
+                    <ng-map center="{{cityObj.lat}},{{cityObj.long}}" zoom="{{zoom}}"></ng-map>
                 </div>
             </div>
-            <div class="chart right " ng-repeat="temp in weather ">
-                <div id="resizable ">
-                    <div zingchart zc-values="temp " zc-json="myJson " zc-width="100% " zc-height="100% "></div>
-                    <ul class="graph_detail ">
-                        <li>0 - Maximum Temperature : {{temp[0]}}</li>
-                        <li>1 - Minimum Temperature : {{temp[1]}}</li>
-                        <li>2 - Humidity : {{temp[2]}}</li>
+            <div class="chart right">
+                <div id="resizable">
+                    <div zingchart zc-values="myValues" zc-json="myJson" zc-width="100%" zc-height="100%"></div>
+                    <ul class="graph_detail">
+                    <li>0 - Maximum Temperature : {{cityObj.temp.temp_max}}</li>
+                    <li>1 - Minimum Temperature : {{cityObj.temp.temp_min}}</li>
+                    <li>2 - Humidity : {{cityObj.temp.humidity}}</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+        </div>
 </body>
-<script src="assets/libs/angular.min.js "></script>
-<script src="bower_components/ngmap/build/scripts/ng-map.min.js "></script>
-<script src="http://maps.google.com/maps/api/js "></script>
-<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js "></script>-->
-<script src="bower_components/zingchart/client/zingchart.min.js "></script>
-<script src="bower_components/ZingChart-AngularJS/src/zingchart-angularjs.js "></script>
-<script src="assets/js/app.js "></script>
-<script src="assets/js/controller.js "></script>
-<script src="assets/js/model.js "></script>
-<script src="assets/js/main.js "></script>
+<script src="assets/libs/angular.min.js"></script>
+<script src="bower_components/ngmap/build/scripts/ng-map.min.js"></script>
+<script src="http://maps.google.com/maps/api/js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>-->
+<script src="bower_components/zingchart/client/zingchart.min.js"></script>
+<script src="bower_components/ZingChart-AngularJS/src/zingchart-angularjs.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/controller.js"></script>
+<script src="assets/js/model.js"></script>
+<script src="assets/js/main.js"></script>
 
 </html>

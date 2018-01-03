@@ -12,28 +12,41 @@
     display: table;
 }
 
+
+
+body {
+    margin: 0px;
+padding: 0px;
+}
+
+
 .container {
     width: 85%;
+/*    height: 620px;*/
     margin: 0px auto;
+    border: 1px solid;
 }
 
 .container .content {
     width: 80%;
     margin: 0px auto;
+/*    margin: 3% 29% 2%;*/
     position: inline-block;
-    /*    position: relative;*/
+    position: relative;
     font-size: 18px;
     padding-bottom: 10px;
-    border: 1px solid;
+    
 }
-
-.uppercontent {
+.uppercontent{
     position: relative;
 }
-
 .content .submit_btn {
     height: 32px;
-    margin-left: 10px;
+/*        width: 80px;*/
+/*        padding: 10px;*/
+    
+   margin-left: 10px;
+/*    font-size: 18px;*/
     font-family: kristen ITC;
     font-weight: bold;
     background: #fcfcfc;
@@ -49,31 +62,33 @@
     margin-left: 28%;
     font-family: kristen ITC;
     position: relative;
+/*    font-size: 16px;*/
     font-weight: bold;
     background: #fcfcfc;
     border: 1px solid #aaa;
     border-radius: 5px;
     box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
 }
-
 #record_icon {
     position: absolute;
-    left: 50%;
+    left: 52%;
     top: 57.5%;
-}
-
-.content input {
-    text-indent: 28px;
-}
-
-.content .fa {
-    position: absolute;
-    top: 7%;
-    right: 46%;
     color: black;
     font-size: 18px;
     cursor: pointer;
 }
+.content input {
+    text-indent: 28px;
+}
+
+/*
+.content .fa {
+    position: absolute;
+    top: 7%;
+    right: 46%;
+    
+}
+*/
 
 table {
     width: 100%;
@@ -87,21 +102,19 @@ table thead tr th {
     font-family: kristen ITC;
     background: #fcfcfc;
 }
-
-.container .plot_detail {
+.container .plot_detail{
     border: 1px solid lightgray;
     margin-bottom: 2px;
     overflow: hidden;
-    /*    background-color: white;*/
+/*    background-color: white;*/
 }
-
 .container .plotMap {
-    width: 48%;
-    /*    margin: 1px;*/
+    width: 49%;
+/*    margin: 1px;*/
     /*    height: 250px;*/
     display: inline-block;
-    /*    border: 1px solid;*/
-    /*    padding: 10px;*/
+/*    border: 1px solid;*/
+/*    padding: 10px;*/
     /*    border-right: 1px solid;*/
     /*    border: 3px solid;*/
 }
@@ -110,23 +123,22 @@ table thead tr th {
     height: 300px;
     width: 400px;
     margin: 3% 5%;
-    /*    border: 1px solid blue;*/
+        border: 1px solid gray;
+    padding: 5px;
 }
-
-ng-map {
+ng-map{
     height: 300px;
 }
-
 .container .chart {
     width: 48%;
-    /*
+/*
     height: 400px;
     margin: 2px;
 */
-    /*    border: 1px solid;*/
-    /*    padding: 10px;*/
+/*    border: 1px solid;*/
+/*    padding: 10px;*/
     display: inline-block;
-    position: relative;
+      position: relative;
 }
 
 #resizable {
@@ -134,23 +146,23 @@ ng-map {
     width: 430px;
     margin: 3%;
     overflow: hidden;
-    /*    padding: 5px;*/
-    /*    border: 2px dashed #AAA;*/
+/*    padding: 5px;*/
+/*    border: 2px dashed #AAA;*/
 }
 
-.ng-isolate-scope {
+.ng-isolate-scope{
     margin-top: 7%;
 }
 
-.chart .graph_detail {
+.chart .graph_detail{
     position: absolute;
     top: 1%;
     left: 20%;
     font-size: 14px;
     list-style: none;
+    
 }
-
-.chart .graph_detail li {
+.chart .graph_detail li{
     padding: 1px;
     text-align: justify;
 }
@@ -158,87 +170,90 @@ ng-map {
 
 /*Responsive code*/
 
-
 /*1024px css code*/
-
 @media screen and (max-width: 1199px) and (min-width: 1024px) {
-    .content .fa {
-        right: 33%;
+    #record_icon {
+        left: 60%;
+        top: 58%
     }
-    .plotMap #map {
+    .plotMap #map{
         width: 318px;
     }
-    #resizable {
+    #resizable{
         width: 350px;
     }
-    .chart .graph_detail {
+    .chart .graph_detail{
         left: 4%;
     }
 }
-
 
 /*992px css code*/
-
 @media screen and (max-width: 1023px) and (min-width: 992px) {
-    .content .fa {
-        right: 30%;
+    #record_icon {
+        left: 61.5%;
+        top: 54%;
     }
-    .plotMap #map {
+    .plotMap #map{
         width: 310px;
     }
-    #resizable {
+    #resizable{
         width: 350px;
     }
-    .chart .graph_detail {
+    .chart .graph_detail{
         left: 4%;
     }
 }
 
-
 /*768px css code*/
-
 @media screen and (max-width: 991px) and (min-width: 768px) {
     .content #input_div {
         width: 172px;
     }
+    
     .content input {
         text-indent: 10px;
     }
-    .content .fa {
-        right: 35%;
+    
+    #record_icon {
+        left: 57.5%;
+        top: 53%;
     }
-    .plotMap #map {
+    .plotMap #map{
         width: 236px;
     }
-    #resizable {
+    #resizable{
         width: 282px;
+        
     }
     .chart .graph_detail {
+        
         left: -3%;
+       
     }
 }
 
-
 /*480px css code*/
-
 @media screen and (max-width: 767px) and (min-width: 480px) {
     .content {
         margin: 3% 16%;
         font-size: 16px;
     }
+    
     .content input {
         text-indent: 10px;
     }
+    
     .content #input_div {
         width: 170px;
         margin-left: 11%;
     }
-    .content .fa {
-        right: 35%;
+    
+    #record_icon {
+        top: 44%;
     }
     .plotMap #map {
         width: 144px;
-        /*        margin-left: 2%;*/
+/*        margin-left: 2%;*/
     }
     .chart .graph_detail {
         top: 1%;
@@ -251,28 +266,31 @@ ng-map {
     }
 }
 
-
 /*320px css code*/
-
 @media screen and (max-width: 479px) and (min-width: 320px) {
-    .container .content {
+    .container .content{
         font-size: 14px;
     }
     .content {
         margin: 3% 4%;
         font-size: 16px;
     }
+    
     .content input {
         text-indent: 5px;
     }
+    
     .content #input_div {
         width: 145px;
+        margin-left: -3%;
     }
-    .content .fa {
-        right: 37%;
+    
+    #record_icon{
+        left: 44%;
+        top: 43.5%;
     }
-    .plotmap #map {
-        width: 92px;
+   .plotMap #map {
+        width: 100px;
         height: 210px;
         margin-left: 2%;
     }
@@ -280,16 +298,18 @@ ng-map {
         height: 200px;
     }
     #resizable {
+
         width: 142px;
         margin-left: -7%;
-        /*        height: 211px;*/
+        height: 212px;
+
     }
     .ng-isolate-scope {
         margin-top: 21%;
     }
     .chart .graph_detail {
         top: 0%;
-        left: 9%;
-        font-size: 8px;
+        left: -35%;
+        font-size: 9px;
     }
 }
