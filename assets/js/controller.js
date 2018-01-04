@@ -1,7 +1,8 @@
 app.controller("whetherCtrl", function ($scope, whetherFactory, NgMap) {
-    var corObj;
+    var corObj,tempObj;
     $scope.corArray = [];
     $scope.cityObj = {};
+    $scope.whether = [];
     $scope.showInfo = function () {
         var cityName = $scope.cityname;
         $scope.cityname = "";
@@ -19,8 +20,14 @@ app.controller("whetherCtrl", function ($scope, whetherFactory, NgMap) {
             $scope.corArray.push(corObj);
             var array = $scope.corArray[$scope.corArray.length - 1];
             console.log("array", array);
-            $scope.myValues = [array.temp.temp_max, array.temp.temp_min, array.temp.humidity];
-            console.log("myvalues =  ", $scope.myValues);
+            tempObj = [corObj.temp.temp_max,corObj.temp.temp_min,corObj.temp.humidity];
+            $scope.whether.push(tempObj);
+            var tempArray = $scope.whether[$scope.whether.length - 1];
+//            console.log("array",$scope.whether);
+            console.log("tarray",tempArray);
+            
+//            $scope.myValues = [array.temp.temp_max, array.temp.temp_min, array.temp.humidity];
+//            console.log("myvalues =  ", $scope.myValues);
             $scope.myObj = {
                 series: [
                     {
